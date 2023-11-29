@@ -1,0 +1,420 @@
+          body {
+            background-image: url('../images/website_1.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            margin: 0;
+            font-family: 'Segoe UI',Verdana, sans-serif;
+        }
+
+        .telecasted {
+            position: fixed;
+            top: 0px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 30px;
+        }
+
+        .telecasted-top {
+            position: fixed;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: rgba(255, 255, 255, 0);
+            padding: 400px;
+            border-radius: 10px;
+            color: rgba(0, 0, 0, 0.107);
+            width: 400px;
+            text-align: top;
+            z-index: 9998;
+        }
+.error-telecast {
+    position: fixed;
+    bottom: 0px;
+    left: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    background-color: #0078d4;
+    padding: 5px; /* Add some padding to the text for better visibility */
+    border-radius: 0px;
+    color: white;
+    width: 100%;
+    text-align: center;
+    z-index: 9998;
+}
+
+.error-telecast span {
+    display: inline-block;
+    animation: runningText 40s linear infinite; /* Adjust the animation duration as needed */
+}
+
+@keyframes runningText {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.popup-container {
+    background: url('../images/Pop_1.png') no-repeat left top;
+    background-size: cover;
+    width: 750px;
+    height: 320px;
+    color: #111111;
+    text-align: center;
+    font-size: 18px;
+    padding-top: 50px;
+    border: 2px solid #005da4;
+    box-shadow: 0px 0px 10px rgba(17, 17, 17, 0.5);
+    z-index: 9999;
+    position: fixed;
+    bottom: 0px;
+    left: 50%;
+    opacity: 0;
+    transition: transform 0.7s cubic-bezier(0.19, 1, 0.22, 1), opacity 0.7s linear;
+}
+
+.show-popup {
+    transform: translateX(-50%) translateY(-50%);
+    opacity: 1;
+}
+
+.button-container {
+    position: absolute;
+    bottom: 22px;
+    right: 20px;
+}
+
+.updatebutton {
+    cursor: pointer;
+    color: #ffffff;
+    background: rgba(10, 117, 205, 0.069);
+    border: 2px solid #e7e7e7;
+    border-radius: 5px;
+    padding: 6px 57px;
+    font-size: 14px;
+    margin-left: 5px;
+}
+.updatebutton:hover {
+    background: #098902;
+    color: #fff;
+}
+
+.ignorebutton {
+    cursor: pointer;
+    color: #ffffff;
+    background: rgba(10, 117, 205, 0.069);
+    border: 2px solid #e7e7e7;
+    border-radius: 5px;
+    padding: 6px 57px;
+    font-size: 14px;
+    margin-left: 5px;
+}
+
+.ignorebutton:hover {
+    background: #a91e1e;
+    color: #fff;
+}
+
+/* Add a class to trigger the animation */
+
+
+.popup-container2 {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 500px;
+    height: 360px;
+    background-color: #fff;
+    color: #333;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.popup-header {
+    background-color: #0078d4;
+    color: #fff;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    padding: 10px;
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.popup-content {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+
+.popup-buttons {
+    position: absolute;
+    bottom: 10px; /* Adjust the bottom spacing as needed */
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    width: 15%; /* Optional: Adjust the width if needed */
+    background-color: #ffffff; /* Windows 10 blue */
+    color: #0078D4;
+    padding: 5px 5px;
+    border: 1px solid #0078D4; /* Darker border color */
+    border-radius: 5px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Subtle box shadow */
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+
+
+.popup-buttons:hover {
+    background: #0078D4;
+    color: #ffffff;
+}
+
+        .disclaimer-popup {
+            position: fixed;
+            top: 0px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: rgba(40, 40, 40, 0.913);
+            color: #ffffff;
+            padding: 45px;
+            border-radius: 5px;
+            display: none;
+            z-index: 10000;
+            text-align: center;
+            font-size: 14px;
+        }
+
+        .support-notification {
+      position: fixed;
+      bottom: 45px;
+      right: -200px; /* Initial off-screen position to the right */
+      background-color: #0078D4;
+      color: #ffffff;
+      padding: 20px;
+      border-radius: 10px;
+      display: none;
+      z-index: 10000;
+      font-size: 24px;
+      border: 3px solid transparent;
+      animation: slideInNotification 0.5s ease-in-out forwards, highlightBorder 2.8s infinite;
+    }
+
+    @keyframes slideInNotification {
+      0% {
+        right: -200px;
+      }
+
+      100% {
+        right: 20px; /* Adjust this value based on your design */
+      }
+    }
+
+    @keyframes highlightBorder {
+      0% {
+        border-color: transparent;
+      }
+
+      50% {
+        border-color: #a91e1e;
+      }
+
+      100% {
+        border-color: transparent;
+      }
+    }
+
+	.blue-description-popup {
+    	position: fixed;
+    	top: 5%;
+    	left: 33%;
+    	transform: translate(-50%, -50%);
+    	width: 500px;
+    	background-color: #0078d4;
+    	color: #ffffff;
+    	padding: 10px;
+    	border-radius: 10px;
+    	display: none;
+    	z-index: 9998;
+    	animation: zoomInOut 0.6s ease-in-out infinite alternate;
+	}
+
+@keyframes zoomInOut {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.05);
+    }
+}
+
+
+
+.blue-description-popup {
+    background-color: #0078d4;
+    color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    width: 440px;
+    text-align: left;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.blue-description-popup p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.blue-description-popup button {
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 20px;
+    margin: 10px;
+    background-color: #fff;
+    color: #0078d4;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.blue-description-popup button:hover {
+    background-color: #0078d4;
+    color: #fff;
+}
+
+
+        .toast-notification {
+            position: fixed;
+            top: 110px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            display: none;
+            z-index: 10001;
+        }
+
+        .key-code-popup {
+            position: fixed;
+            top: 30%;
+            left: 55%;
+            transform: translate(-50%, -50%);
+            background-color: #a91e1e;
+            padding: 20px;
+            border-radius: 8px;
+            display: none;
+            z-index: 10002;
+            text-align: center;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .key-code-input {
+            font-size: 16px;
+            padding: 5px;
+            margin: 5px;
+        }
+
+        .key-code-submit {
+    font-size: 13px;
+    font-weight: bold;
+    padding: 8px 16px;
+    border-radius: 5px;
+    margin: 8px;
+    cursor: pointer;
+    background-color: #0078d4;
+    color: #fff;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Add a smooth transition effect */
+}
+
+.key-code-submit:hover {
+    background-color: #098902; /* Change the background color on hover */
+    color: #fff; /* Change the text color on hover */
+}
+.key-code-submit {
+    font-size: 13px;
+    font-weight: bold;
+    padding: 8px 16px;
+    margin: 8px;
+    cursor: pointer;
+    background-color: #0078d4;
+    color: #fff;
+    position: relative;
+}
+
+.key-code-submit:hover::before {
+    content: "🔓"; /* Add the text or emoji you want on hover */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #098902; /* Change the background color on hover */
+    color: #fff; /* Change the text color on hover */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    font-family: 'Arial', sans-serif; /* Change the font family */
+    font-weight: bold; /* Make the text bold */
+    font-size: 18px; /* Adjust the font size */
+}
+
+        .loading-animation {
+            display: none;
+            position: fixed;
+            top: 40%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 10003;
+        }
+
+        .loading-spinner {
+            border: 4px solid rgba(255, 255, 255, 0.3);
+            border-top: 4px solid #808080;
+            border-radius: 70%;
+            width: 60px;
+            height: 60px;
+            animation: spin 5s linear infinite;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        .close-button {
+    cursor: pointer;
+    color: #fff;
+    font-size: 20px;
+    position: absolute;
+    bottom: 300px;
+    right: -15px;
+    background-color: #0078D4; /* Windows 10 blue */
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    transition: background-color 0.3s ease;
+}
+
+.close-button:hover {
+    background-color: #a91e1e; /* Darker shade on hover */
+}
